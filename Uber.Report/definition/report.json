@@ -1,0 +1,148 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.0.0/schema.json",
+  "themeCollection": {
+    "baseTheme": {
+      "name": "CY25SU11",
+      "reportVersionAtImport": {
+        "visual": "2.4.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Custom6152677742748504.json",
+      "reportVersionAtImport": {
+        "visual": "2.4.0",
+        "report": "3.0.0",
+        "page": "2.3.0"
+      },
+      "type": "RegisteredResources"
+    }
+  },
+  "objects": {
+    "section": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Top'"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "expanded": {
+            "expr": {
+              "Literal": {
+                "Value": "false"
+              }
+            }
+          }
+        }
+      }
+    ]
+  },
+  "resourcePackages": [
+    {
+      "name": "SharedResources",
+      "type": "SharedResources",
+      "items": [
+        {
+          "name": "CY25SU11",
+          "path": "BaseThemes/CY25SU11.json",
+          "type": "BaseTheme"
+        }
+      ]
+    },
+    {
+      "name": "RegisteredResources",
+      "type": "RegisteredResources",
+      "items": [
+        {
+          "name": "New_Project_(83)704439962404404.jpg",
+          "path": "New_Project_(83)704439962404404.jpg",
+          "type": "Image"
+        },
+        {
+          "name": "IntercityComfort6797986300688068.png",
+          "path": "IntercityComfort6797986300688068.png",
+          "type": "Image"
+        },
+        {
+          "name": "1659761100uber-logo-png4297953560045442.png",
+          "path": "1659761100uber-logo-png4297953560045442.png",
+          "type": "Image"
+        },
+        {
+          "name": "1659761100uber-logo-png04312267314181073.png",
+          "path": "1659761100uber-logo-png04312267314181073.png",
+          "type": "Image"
+        },
+        {
+          "name": "Group_1_(67)6033103243263006.png",
+          "path": "Group_1_(67)6033103243263006.png",
+          "type": "Image"
+        },
+        {
+          "name": "Custom6152677742748504.json",
+          "path": "Custom6152677742748504.json",
+          "type": "CustomTheme"
+        },
+        {
+          "name": "arrival251225915611168.png",
+          "path": "arrival251225915611168.png",
+          "type": "Image"
+        },
+        {
+          "name": "location_(3)8731113866432149.png",
+          "path": "location_(3)8731113866432149.png",
+          "type": "Image"
+        },
+        {
+          "name": "growth_(4)6547316538036234.png",
+          "path": "growth_(4)6547316538036234.png",
+          "type": "Image"
+        },
+        {
+          "name": "distance(1)7572242138702235.png",
+          "path": "distance(1)7572242138702235.png",
+          "type": "Image"
+        },
+        {
+          "name": "sedan23904472475548666.png",
+          "path": "sedan23904472475548666.png",
+          "type": "Image"
+        },
+        {
+          "name": "loading_(1)1321035752103522.png",
+          "path": "loading_(1)1321035752103522.png",
+          "type": "Image"
+        },
+        {
+          "name": "Setting_Changes(1)1860994286892943.png",
+          "path": "Setting_Changes(1)1860994286892943.png",
+          "type": "Image"
+        },
+        {
+          "name": "download__1_-removebg-preview029346873783877903.png",
+          "path": "download__1_-removebg-preview029346873783877903.png",
+          "type": "Image"
+        }
+      ]
+    }
+  ],
+  "settings": {
+    "useStylableVisualContainerHeader": true,
+    "exportDataMode": "AllowSummarized",
+    "defaultDrillFilterOtherVisuals": true,
+    "allowChangeFilterTypes": true,
+    "useEnhancedTooltips": true,
+    "useDefaultAggregateDisplayName": true
+  }
+}

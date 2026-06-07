@@ -1,0 +1,60 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.4.0/schema.json",
+  "name": "23d20d67007084836922",
+  "position": {
+    "x": 546.01517773931573,
+    "y": 337.42510983890293,
+    "z": 2000,
+    "height": 149.6940487285315,
+    "width": 474.84915457329254,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Uber",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontFamily": "Cambria",
+                      "fontSize": "12pt"
+                    }
+                  },
+                  {
+                    "value": " is a leading mobility and ride-sharing company that provides transportation and delivery services through its digital platform, serving millions of users worldwide.",
+                    "textStyle": {
+                      "fontFamily": "Cambria",
+                      "fontSize": "12pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

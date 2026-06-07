@@ -1,0 +1,194 @@
+table UberData
+	lineageTag: 8e9825e8-ebb1-4264-8d44-6fc7df4ae07c
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f0d7199b-00f0-4ae5-9496-b98c91439013
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Time
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 9434d0de-2bea-4fd0-89a0-710e508cb224
+		summarizeBy: none
+		sourceColumn: Time
+
+		variation Variation
+			isDefault
+			relationship: 12217305-a0ac-416a-976d-c6e3f857e3e3
+			defaultHierarchy: LocalDateTable_53ae6d44-6f57-43e5-8341-6d11987fee04.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Booking ID'
+		dataType: string
+		lineageTag: 465465d8-0e94-4e5b-bc39-28b14b4ae32a
+		summarizeBy: none
+		sourceColumn: Booking ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Booking Status'
+		dataType: string
+		lineageTag: a37512c1-63dc-497b-8093-88989841479b
+		summarizeBy: none
+		sourceColumn: Booking Status
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Customer ID'
+		dataType: string
+		lineageTag: 90c43e6e-4f21-4b80-b00c-95246c5de876
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Vehicle Type'
+		dataType: string
+		lineageTag: 81182b22-f258-4999-9689-524a4f75b562
+		summarizeBy: none
+		sourceColumn: Vehicle Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Pickup Location'
+		dataType: string
+		lineageTag: f9caf556-21ab-4277-852a-fa2313549a1e
+		summarizeBy: none
+		sourceColumn: Pickup Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Drop Location'
+		dataType: string
+		lineageTag: 3436f1da-345b-42f1-8c4a-4f55b5539979
+		summarizeBy: none
+		sourceColumn: Drop Location
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cancelled Rides by Customer'
+		dataType: int64
+		formatString: 0
+		lineageTag: a34ab094-34b3-4ac6-8959-face069456b4
+		summarizeBy: sum
+		sourceColumn: Cancelled Rides by Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Reason for cancelling by Customer'
+		dataType: string
+		lineageTag: c1022624-1d4d-4214-846b-a6db0287a7f7
+		summarizeBy: none
+		sourceColumn: Reason for cancelling by Customer
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Cancelled Rides by Driver'
+		dataType: string
+		lineageTag: 11b16bd0-466f-4d73-bac6-f71ab8b8f0a5
+		summarizeBy: none
+		sourceColumn: Cancelled Rides by Driver
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Driver Cancellation Reason'
+		dataType: string
+		lineageTag: a389198c-6b23-41e0-a4e0-e7c8c8e25da9
+		summarizeBy: none
+		sourceColumn: Driver Cancellation Reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Incomplete Rides'
+		dataType: string
+		lineageTag: 3162d999-85fb-4bae-aaf5-570a0a4aa812
+		summarizeBy: none
+		sourceColumn: Incomplete Rides
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Incomplete Rides Reason'
+		dataType: string
+		lineageTag: 182505f8-1720-4477-9d3a-ef917fe765b9
+		summarizeBy: none
+		sourceColumn: Incomplete Rides Reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Booking Value'
+		dataType: double
+		lineageTag: dc71c0e5-57af-4bee-b03e-241e13739a1e
+		summarizeBy: sum
+		sourceColumn: Booking Value
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Ride Distance'
+		dataType: double
+		lineageTag: 81f4a374-5e4b-4889-93da-1ed0566b86f5
+		summarizeBy: sum
+		sourceColumn: Ride Distance
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Driver Ratings'
+		dataType: double
+		lineageTag: d768bd4f-e292-46b9-94aa-66a35c47ae43
+		summarizeBy: sum
+		sourceColumn: Driver Ratings
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Customer Rating'
+		dataType: double
+		lineageTag: 15cfc2e5-9595-4692-9b02-47712d826ff3
+		summarizeBy: sum
+		sourceColumn: Customer Rating
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'Payment Method'
+		dataType: string
+		lineageTag: 6cb87f2a-8627-4e5c-bda9-07c265556cf2
+		summarizeBy: none
+		sourceColumn: Payment Method
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ve_Type = IF(CONTAINSSTRING(UberData[Vehicle Type],"Bike"),"Bike",UberData[Vehicle Type])
+		lineageTag: 79e36972-ea7f-4fb1-93bd-c4ea3074b439
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition UberData = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents("C:\Users\ARYAN SINGH\Desktop\Uber Dashboard Dashboard\Dataset-20260605T163043Z-3-001\Dataset\uber.xlsx"), null, true),
+				    Sheet1_Sheet = Source{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Promoted Headers" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Time", type datetime}, {"Booking ID", type text}, {"Booking Status", type text}, {"Customer ID", type text}, {"Vehicle Type", type text}, {"Pickup Location", type text}, {"Drop Location", type text}, {"Cancelled Rides by Customer", Int64.Type}, {"Reason for cancelling by Customer", type text}, {"Cancelled Rides by Driver", type any}, {"Driver Cancellation Reason", type any}, {"Incomplete Rides", type any}, {"Incomplete Rides Reason", type any}, {"Booking Value", type number}, {"Ride Distance", type number}, {"Driver Ratings", type number}, {"Customer Rating", type number}, {"Payment Method", type any}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

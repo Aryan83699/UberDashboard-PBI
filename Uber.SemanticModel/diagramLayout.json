@@ -1,0 +1,85 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 151.19999694824219,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 298,
+            "y": 186.75
+          },
+          "nodeIndex": "UberData",
+          "nodeLineageTag": "8e9825e8-ebb1-4264-8d44-6fc7df4ae07c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 28,
+            "y": 6.75
+          },
+          "nodeIndex": "Veh_IMG",
+          "nodeLineageTag": "671b8782-1388-4941-b5ce-237073a2025d",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 568,
+            "y": 53.75
+          },
+          "nodeIndex": "_Measures",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 579.999997138977,
+            "y": 297.75
+          },
+          "nodeIndex": "Calendar",
+          "nodeLineageTag": "f3c726c0-b8b7-414d-94c6-10b9c7379a5b",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 835.999997138977,
+            "y": 171.75
+          },
+          "nodeIndex": "Date Axis",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}
